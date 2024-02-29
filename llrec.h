@@ -4,6 +4,8 @@
 #define NULL 0
 #endif
 
+/*REMOVE*/ //#include <iostream>
+
 /**
  * Node struct for both problems
  */
@@ -84,7 +86,26 @@ Node* llfilter(Node* head, Comp pred)
     // Provide your implementation below
     //*********************************************
 
-
+    if (head == NULL) return NULL;
+    if (head->next == NULL) {
+        //std::cout << head->val << std::endl;
+        if (!pred(head->val)) return head;
+        delete head;
+        return NULL;
+    }
+    else if (!pred(head->val)) {
+        //std::cout << head->val << std::endl;
+        head->next = llfilter(head->next, pred);
+        return head;
+    } 
+    else {
+        //std::cout << "deleting: " << head->val << std::endl;
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        head = llfilter(head, pred);
+        return head;
+    }
 }
 
 #endif
