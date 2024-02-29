@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <vector>
 
-#include <iostream> //DELETE LATER
+//#include <iostream> //DELETE LATER
 
 template <typename T, typename PComparator = std::less<T> >
 class Heap
@@ -63,12 +63,12 @@ public:
   size_t size() const;
 
   //debug, delete later
-  void printArr() {
+  /*void printArr() {
     for (size_t i = 0; i < heap_.size(); i++) {
       std::cout << heap_[i] << ", ";
     }
     std::cout << std::endl;
-  }
+  }*/
 
 private:
   /// Add whatever helper functions and data members you need below
