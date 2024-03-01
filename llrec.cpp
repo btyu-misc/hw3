@@ -28,7 +28,9 @@ void llpivot (Node*& head, Node*& smaller, Node*& larger, int pivot) {
     head = NULL;
 }
 
-//PREVIOUS IMPLEMENTATION (STILL WORKS)
+//PREVIOUS IMPLEMENTATION (STILL WORKS), uses tail recursion. I wanted to try implementing
+//a head recursion implementation of llpivot, which is the above function (with a helper function)
+
 /*
 void llpivot(Node*& head, Node*& smaller, Node*& larger, int pivot) {
     if (head == NULL) {
