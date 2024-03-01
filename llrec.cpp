@@ -30,7 +30,7 @@ void llpivot (Node*& head, Node*& smaller, Node*& larger, int pivot) {
 
 //PREVIOUS IMPLEMENTATION (STILL WORKS)
 /*
-void pivotHelp(Node*& head, Node*& smaller, Node*& larger, int pivot) {
+void llpivot(Node*& head, Node*& smaller, Node*& larger, int pivot) {
     if (head == NULL) {
         smaller = NULL;
         larger = NULL;
